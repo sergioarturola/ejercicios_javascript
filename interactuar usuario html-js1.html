@@ -1,0 +1,61 @@
+<!--
+    Realizar un programa en javascript con las siguientes caracteristicas
+    Al inicio tiene que pedir 2 numeros y verificar si son iguales o son diferentes, despues comprobar que sean distintos de cero,
+    con un confirm preguntar si se desea continuar o no, si la respuesta es positiva entonces pedir una cadena de texto si la palabra
+    es igual a "JavaScript" si es asi mandar un alert con el mensaje "Escribiste la palabra correcta" sino es asi entonces mandar
+    un mensaje que esa no era la palabra,  por ultimo pedir en un prompt un numero y ver si es numero par o impar
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactuar con usuario</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Digita un numero"));
+        let b = parseInt(prompt("Digita otro numero"));
+        const palabra = "JavaScript";
+
+        if(a === b){
+            alert("Los numeros son iguales");
+        }
+        else{
+            alert("Los numeros son diferentes")
+        }
+
+        if(a > 0 && b > 0){
+            alert("Son numeros mayores a CERO");
+        }
+        else{
+            alert("NO son mayores a CERO")
+        }
+
+        if(confirm("Quieres continuar?") == true){
+
+            let texto = prompt("Escribe una cadena de texto");
+
+            if(palabra === texto){
+                alert("Escribiste la palabra correcta!!")
+            }
+            else{
+                alert("Ingresaste palabra incorrecta")
+            }
+
+            let numero = parseInt(prompt("Digita un numero"));
+            if(numero%2 == 0){
+                alert("Numero par")
+            }
+            else{
+                alert("Numero impar");
+            }
+        }
+        else{
+            alert("aqui termino")
+        }
+    </script> 
+</body>
+</html>

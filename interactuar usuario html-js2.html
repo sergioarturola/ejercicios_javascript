@@ -1,0 +1,51 @@
+<!--
+    Realizar un programa en javascript que mediante el prompt pregunte la edad, si es menor de edad mandar un alert con un mensaje de
+    que no puede continuar, si es mayor entonces preguntar si desea continuar por medio de un confirm, si es asi entonces pedir su nombre 
+    y contar cuantos caracteres tiene, posteriormente pedir una temperarura en grados centigrados y mostrarla en un alert
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        let edad = parseInt(prompt("Digita tu edad"));
+
+        if(edad >= 18){
+            if(confirm("Deseas continuar?") == true){
+
+                let numero = parseInt(prompt("Ingresa tu numero favorito"));
+                if(numero%2 == 0){
+                    alert("Numero par");
+                }
+                else{
+                    alert("Numero impar");
+                }
+
+                let nombre = prompt("Escribe tu nombre");
+                alert("Tu nombre "+nombre+" tiene: "+nombre.length+" caracteres");
+
+                let grados = parseFloat(prompt("Ingresa una temperatura en grados"));
+                let f = (grados * 1.8) +32;
+
+                alert("La temperatura en °F es: "+f);
+
+            }
+            else{
+                alert("Ok, hasta luego")
+            }
+
+        }
+        else{
+            alert("No puedes continuar");
+        }
+
+    </script>
+    
+</body>
+</html>
