@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+    el programa escoge al azar un entero entre 1 y 10, el usuario , luego a el usuario se le pedirá que introduzca un número en un popup para intentar adivinarlo. 
+    Si la entrada del usuario coincide con el número de conjetura, el programa mostrará un mensaje de "buen trabajo" 
+    de lo contrario mostrará un mensaje de "No corresponde"
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinar numero</title>
+</head>
+<body>
+    <script>
+        const adivinar = Math.floor(Math.random() *10);
+        const num_user = parseInt(prompt("Ingresa un numero del 1 al 10", "Suerte"));
+
+        if(num_user === adivinar){//usando el operador estricto
+            document.write("Buen trabajo");
+        }
+        else{
+            document.write("No corresponde");
+        }
+
+        //document.write("Tu numero: "+num_user+" Mi numero: "+adivinar);
+
+    </script>
+    
+</body>
+</html>
