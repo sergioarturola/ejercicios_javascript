@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludar al usuario</title>
+</head>
+<body>
+ 
+    <p>Saludaremos al usuario con HTML y JS</p>
+    <input/>
+    <button>Enviar</button>
+
+    <script>
+        
+        var hacerClic = document.querySelector("button");
+        hacerClic.onclick = saludar;
+
+        function saludar(){
+
+            let entrada = document.querySelector("input");
+            let nombre = entrada.value;
+            alert("Saludos a " + nombre);
+            entrada.value = "";
+            entrada.focus();
+        }
+        
+    </script>
+    
+</body>
+</html>
