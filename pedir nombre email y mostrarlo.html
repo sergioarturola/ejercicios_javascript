@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 
+Usando el DOM y los input de html pedir nombre y correo y mostrarlos en el documento
+-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+</head>
+<body>
+    <label>Nombre</label>
+    <input type="text" id="nombre" required><br>
+    <label>Emmail</label>
+    <input type="E-mail" id="correo" required><br>
+    <input type="submit" value="Enviar" onclick="mostrarDatos()">
+    <p>Datos</p>
+    </div>
+    <script>
+        function mostrarDatos(){
+            const parrafo =  document.createElement('p');
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const texto = "Nombre: "+nombre+" Correo: "+correo;
+            parrafo.textContent = texto;
+            document.body.appendChild(parrafo);
+        }
+    </script>
+    
+</body>
+</html>
