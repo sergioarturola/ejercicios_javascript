@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludar con html y JS</title>
+    <style> #uno{background-color: rgb(166, 206, 36);
+                 float:left;
+                border-style: dotted;
+                border-color: red;
+                border-radius: 5px;
+                padding-bottom: 1cm;
+                padding-top: 1cm;
+                padding-left: 1cm;
+                padding-right: 1cm;
+                 }
+
+                #dos{
+                    float: right;
+                }
+
+                p{font-size: 1cm;
+                  font-style: italic;
+                  border-style: dashed;
+                  border-radius: 5x;
+                  border-color: blueviolet;
+                  background-color: yellow;
+                  padding-left: 12cm;
+
+                }
+
+            body{background-color: chartreuse;}
+            </style>
+    
+</head>
+<body>
+    <p>Mi primer saludo con HTML-CSS-JS</p>
+    <div>
+        <form id="uno">
+            <label>Nombre</label>
+            <input type="text" id="txtNombre" name="txtNombre ">
+            <br>
+            <label>Edad</label>
+            <input type="text" id="txtEdad" name="txtEdad">
+            <br>
+            <button type="button" id="btnEnviar" onclick="saludo()">Saludar</button>
+                <script>
+                    function saludo(){
+            
+                        var nombre = document.getElementById('txtNombre').value;
+                        var age = document.getElementById('txtEdad').value;
+                        alert("Saludos "+ nombre +" tu edad es: "+ age);
+                    }
+                
+                </script>
+        </form>
+    </div>
+</body>
+</html>
