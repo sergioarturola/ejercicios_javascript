@@ -1,0 +1,122 @@
+<!--
+Crear un formulario con html que al menos tenga un input, radiobuttom, checbox 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crear objeto</title>
+	<style type="text/css">
+		*{
+			margin : 0;
+			padding: 0;
+			box-sizing: content-box;
+		}
+
+		 body{
+		 	background-color : #eff4eb;
+		 }
+
+		 .formulario{
+		 	  display: flex;
+  			  justify-content: center;
+                          align-items: center;
+		 }
+
+		 form{
+
+		 	font-family: sans-serif;
+		 	border-style: dotted;
+		 	background-color: #bfe5f8;
+		 	width: 25%;
+
+		 }
+
+		 .name{
+		 	margin: 1em;
+		 	display: flex;
+		 	flex-direction: row;
+		 	color : red;
+
+		 }
+
+		 .sex{
+		 	margin: 1em;
+		 	color : green;
+		 	position: relative;
+		 }
+
+		 .sex span{
+		 	display: block;
+		 	color: black;
+		 	font-weight: 100;
+		 }
+
+		 .colors{
+		    margin: 1em;
+		 	color : blue;
+		 	position: relative;
+		 }
+
+		 .colors span{
+		 	display: block;
+		 	color: black;
+		 	font-weight: 100;
+		 }
+
+		 input[type=button]{
+		 	width: 100%;
+		 	color : black;
+		 	background-color: white;
+		 	cursor: pointer;
+		 }
+
+	</style>
+</head>
+<body>
+	<div class="formulario">
+		<form>
+			<div class="name">
+				<label for="nombre">Nombre</label>
+				<input type="text" id="nombre"  maxlength="20">
+			</div>
+			<div class="sex">
+				<label><span>Sexo</span></label>
+				<label>M</label><input type="radio" name="sexo" value="mujer">
+				<label>H</label><input type="radio" name="sexo" value="hombre">
+			</div>
+			<div class="colors">
+				<label><span>Colores</span></label>
+				<label>Rojo</label><input type="checkbox" name="c1" value="rojo">
+				<label>Azul</label><input type="checkbox" name="c2" value="azul">
+		    	<label>Verde</label><input type="checkbox" name="c2" value="verde">
+		    </div>
+			<input type="button" onclick="saludo()" value ="Enviar">
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+		function saludo(){
+
+			let seleccionados = [];//array para guarrdar checbox
+
+			const nombre = document.getElementById("nombre").value;
+
+			const sexo = document.querySelector('input[type=radio][name=sexo]:checked').value;
+			const colores = document.querySelectorAll('input[type="checkbox"]:checked');
+
+		    seleccionados = Array.from(colores).map(x => x.value); 
+			console.log("holi crayoli");
+			console.log(nombre);
+			console.log(sexo);
+			console.log(seleccionados);
+
+			const objeto = Object.create({name : nombre, colores : seleccionados});
+			console.log(objeto);
+
+		}
+	</script>
+
+</body>
+</html>
